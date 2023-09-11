@@ -13,6 +13,7 @@ caminho=$(pwd)
 mkdir build
 cp -vrp $caminho/DEBIAN/ $caminho/build/
 cp -vrp $caminho/usr/ $caminho/build/
+cp -vrp $caminho/etc/ $caminho/build/
 
 cd build
 
