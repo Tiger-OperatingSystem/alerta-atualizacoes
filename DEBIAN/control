@@ -1,6 +1,6 @@
 Package: system-upgrade
 Version: 1.0.4
-Depends: pop-shop-wrapper, yad
+Depends: yad
 Architecture: all
 Maintainer: Elton Fabricio <https://github.com/eltonfabricio10>
 Section: admin
