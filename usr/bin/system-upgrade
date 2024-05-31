@@ -9,10 +9,6 @@ PINGTEST=$(ping -c 1 google.com | grep [0-9])
 # do not run it on live system
 if [ -e "/rofs" ];then
     if [ "$1" = "--gui" ];then
-        yad --posx="-10" --posy="-50" --undecorated --skip-taskbar \
-            --borders="5" --image="system-software-update" --on-top \
-            --width="400" --text="\n\t<b>O sistema está em modo live!</b>\n\n\tNão é recomendado atualizar o sistema." \
-            --button=gtk-ok &
         exit
     else
         exit
@@ -48,7 +44,7 @@ else
             RET="$?"
             # run synaptic
             if [ "$RET" = "0" ];then
-               io.elementary.appcenter --show-updates
+               plasma-discover --mode=Update
             else
                 exit
             fi
